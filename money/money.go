@@ -7,7 +7,7 @@ import (
 )
 
 func RoundHalfUp(x float64) int64 {
-	return int64(math.Floor(x + 0.5))
+	return max(0, int64(math.Floor(x+0.5)))
 }
 
 func FormatCents(cents int64) string {
