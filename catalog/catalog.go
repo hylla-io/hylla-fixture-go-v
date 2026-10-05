@@ -2,6 +2,7 @@
 package catalog
 
 import (
+	"github.com/evanmschultz/hylla-fixture-go-v/discount"
 	"github.com/evanmschultz/hylla-fixture-go-v/pricing"
 	"github.com/evanmschultz/hylla-fixture-go-v/tax"
 )
@@ -31,5 +32,9 @@ func (c *Catalog) Subtotal() int64 {
 }
 
 func (c *Catalog) Total(ratePercent int64) int64 {
-	return tax.ApplyTax(c.Subtotal(), ratePercent)
+	var bulk int64
+	if c.Count() >= 3 {
+		bulk = 10
+	}
+	return tax.ApplyTax(discount.ApplyDiscount(c.Subtotal(), bulk), ratePercent)
 }

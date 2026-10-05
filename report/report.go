@@ -17,7 +17,7 @@ func RenderReport(c *catalog.Catalog, ratePercent int64) string {
 	}
 	return strings.Join([]string{
 		fmt.Sprintf("items: %d (%s)", c.Count(), kind),
-		"subtotal: " + money.FormatCents(c.Subtotal()),
-		"total: " + money.FormatCents(c.Total(ratePercent)),
+		"subtotal: " + money.FormatMoney(c.Subtotal()),
+		"total: " + money.FormatMoney(c.Total(ratePercent)),
 	}, "\n")
 }

@@ -10,7 +10,7 @@ func RoundHalfUp(x float64) int64 {
 	return max(0, int64(math.Floor(x+0.5)))
 }
 
-func FormatCents(cents int64) string {
+func FormatMoney(cents int64) string {
 	sign := ""
 	if cents < 0 {
 		sign = "-"

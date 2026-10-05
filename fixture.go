@@ -3,6 +3,7 @@ package fixture
 
 import (
 	"github.com/evanmschultz/hylla-fixture-go-v/catalog"
+	"github.com/evanmschultz/hylla-fixture-go-v/discount"
 	"github.com/evanmschultz/hylla-fixture-go-v/legacy"
 	"github.com/evanmschultz/hylla-fixture-go-v/money"
 	"github.com/evanmschultz/hylla-fixture-go-v/pricing"
@@ -17,9 +18,10 @@ type (
 )
 
 var (
-	ApplyTax     = tax.ApplyTax
-	FormatCents  = money.FormatCents
-	LegacyTotal  = legacy.LegacyTotal
-	NewCatalog   = catalog.New
-	RenderReport = report.RenderReport
+	ApplyDiscount = discount.ApplyDiscount
+	ApplyTax      = tax.ApplyTax
+	FormatMoney   = money.FormatMoney
+	LegacyTotal   = legacy.LegacyTotal
+	NewCatalog    = catalog.New
+	RenderReport  = report.RenderReport
 )
