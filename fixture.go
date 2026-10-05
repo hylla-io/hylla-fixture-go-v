@@ -2,6 +2,7 @@
 package fixture
 
 import (
+	"github.com/evanmschultz/hylla-fixture-go-v/badge"
 	"github.com/evanmschultz/hylla-fixture-go-v/catalog"
 	"github.com/evanmschultz/hylla-fixture-go-v/discount"
 	"github.com/evanmschultz/hylla-fixture-go-v/money"
@@ -19,6 +20,7 @@ type (
 var (
 	ApplyDiscount = discount.ApplyDiscount
 	ApplyTax      = tax.ApplyTax
+	Badge         = badge.Badge
 	FormatMoney   = money.FormatMoney
 	NewCatalog    = catalog.New
 	RenderReport  = report.RenderReport
